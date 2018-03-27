@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D0BB47A52069357A007D5F48 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D0BB47A42069357A007D5F48 /* main.c */; };
+		D0BB47AC206935C5007D5F48 /* aes.c in Sources */ = {isa = PBXBuildFile; fileRef = D0BB47AB206935C5007D5F48 /* aes.c */; };
+		D0BB47B120693E7B007D5F48 /* Helper.c in Sources */ = {isa = PBXBuildFile; fileRef = D0BB47B020693E7B007D5F48 /* Helper.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		D0BB47A12069357A007D5F48 /* CryptoLabwork1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CryptoLabwork1; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BB47A42069357A007D5F48 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		D0BB47AB206935C5007D5F48 /* aes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aes.c; sourceTree = "<group>"; };
+		D0BB47AF20693E7B007D5F48 /* Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		D0BB47B020693E7B007D5F48 /* Helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Helper.c; sourceTree = "<group>"; };
+		D0BB47B2206942EA007D5F48 /* aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +63,11 @@
 		D0BB47A32069357A007D5F48 /* CryptoLabwork1 */ = {
 			isa = PBXGroup;
 			children = (
+				D0BB47AB206935C5007D5F48 /* aes.c */,
 				D0BB47A42069357A007D5F48 /* main.c */,
+				D0BB47AF20693E7B007D5F48 /* Helper.h */,
+				D0BB47B020693E7B007D5F48 /* Helper.c */,
+				D0BB47B2206942EA007D5F48 /* aes.h */,
 			);
 			path = CryptoLabwork1;
 			sourceTree = "<group>";
@@ -120,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0BB47A52069357A007D5F48 /* main.c in Sources */,
+				D0BB47AC206935C5007D5F48 /* aes.c in Sources */,
+				D0BB47B120693E7B007D5F48 /* Helper.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

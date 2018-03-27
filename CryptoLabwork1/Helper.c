@@ -7,16 +7,17 @@
 //
 
 #include "Helper.h"
+
 void writeToOuputFile(char *text) {
     FILE * fp;
     fp = fopen ("outputFile","w");
     fprintf (fp, "%s", text);
     fclose (fp);
 }
-char *readInputFile() {
+char *readInputFile(char *fileName) {
     char * buffer = 0;
     long length;
-    FILE * f = fopen ("inputFile", "rb");
+    FILE * f = fopen (fileName, "rb");
     
     if (f)
     {
@@ -62,4 +63,13 @@ int appendString(char **json, const char *format, ...)
     free(str);
     
     return 0;
+}
+void convertCharToByteArray(BYTE messageFromFile[],char *input){
+    int i = 0;
+    char *p = strtok (input, " ");
+    while (p != NULL)
+    {
+        messageFromFile[i++] = (BYTE)strtol(p,NULL,16);
+        p = strtok (NULL, " ");
+    }
 }

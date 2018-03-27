@@ -13,7 +13,10 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include "aes.h"
 void writeToOuputFile(char *text);
-char *readInputFile(void);
+//char *readInputFile(void);
+char *readInputFile(char *fileName);
 int appendString(char **json, const char *format, ...);
+void convertCharToByteArray(BYTE messageFromFile[],char *input);
 #endif /* Helper_h */
