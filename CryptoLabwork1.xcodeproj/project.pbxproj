@@ -25,7 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D0BB47A12069357A007D5F48 /* CryptoLabwork1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CryptoLabwork1; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0BB47A12069357A007D5F48 /* aes-encrypt-ecb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "aes-encrypt-ecb"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BB47A42069357A007D5F48 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		D0BB47AB206935C5007D5F48 /* aes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aes.c; sourceTree = "<group>"; };
 		D0BB47AF20693E7B007D5F48 /* Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		D0BB47A22069357A007D5F48 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0BB47A12069357A007D5F48 /* CryptoLabwork1 */,
+				D0BB47A12069357A007D5F48 /* aes-encrypt-ecb */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,9 +75,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D0BB47A02069357A007D5F48 /* CryptoLabwork1 */ = {
+		D0BB47A02069357A007D5F48 /* aes-encrypt-ecb */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0BB47A82069357A007D5F48 /* Build configuration list for PBXNativeTarget "CryptoLabwork1" */;
+			buildConfigurationList = D0BB47A82069357A007D5F48 /* Build configuration list for PBXNativeTarget "aes-encrypt-ecb" */;
 			buildPhases = (
 				D0BB479D2069357A007D5F48 /* Sources */,
 				D0BB479E2069357A007D5F48 /* Frameworks */,
@@ -87,9 +87,9 @@
 			);
 			dependencies = (
 			);
-			name = CryptoLabwork1;
+			name = "aes-encrypt-ecb";
 			productName = CryptoLabwork1;
-			productReference = D0BB47A12069357A007D5F48 /* CryptoLabwork1 */;
+			productReference = D0BB47A12069357A007D5F48 /* aes-encrypt-ecb */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -119,7 +119,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D0BB47A02069357A007D5F48 /* CryptoLabwork1 */,
+				D0BB47A02069357A007D5F48 /* aes-encrypt-ecb */,
 			);
 		};
 /* End PBXProject section */
@@ -269,7 +269,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0BB47A82069357A007D5F48 /* Build configuration list for PBXNativeTarget "CryptoLabwork1" */ = {
+		D0BB47A82069357A007D5F48 /* Build configuration list for PBXNativeTarget "aes-encrypt-ecb" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0BB47A92069357A007D5F48 /* Debug */,

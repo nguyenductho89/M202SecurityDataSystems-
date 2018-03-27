@@ -12,7 +12,7 @@ int main (int argc, char *argv[])
 {
     char *inputFile, *outputFile;
     if (argc != 3) {
-        printf("Usage: aes-encrypt-ecb <input_file> <output_file>");
+        printf("Usage: aes-encrypt-ecb <input_file> <output_file>\n");
         return 0;
     }
     inputFile = argv[1];
@@ -43,7 +43,8 @@ int main (int argc, char *argv[])
         appendString(&hexCipherString, "%x ",cipher[i]);
     }
         // Write cipher string to output file
-    writeToOuputFile(hexCipherString);
+    writeToOuputFile(hexCipherString, outputFile);
+    printf("Encryption finish successfully! Check %s for result\n",outputFile);
     return 0;
 }
 

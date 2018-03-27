@@ -8,9 +8,9 @@
 
 #include "Helper.h"
 
-void writeToOuputFile(char *text) {
+void writeToOuputFile(char *text, char *fileName) {
     FILE * fp;
-    fp = fopen ("outputFile","w");
+    fp = fopen (fileName,"w");
     fprintf (fp, "%s", text);
     fclose (fp);
 }
@@ -30,11 +30,13 @@ char *readInputFile(char *fileName) {
             fread (buffer, 1, length, f);
         }
         fclose (f);
+    }else {
+        perror("Check input file");
+        exit(-1);
     }
     
     if (buffer)
     {
-        //printf("%s", buffer);
         return buffer;
     }else {return NULL;}
 }
