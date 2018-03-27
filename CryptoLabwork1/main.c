@@ -10,13 +10,14 @@
 #include "Helper.h"
 int main (int argc, char *argv[])
 {
-    char *inputFile, *outputFile;
-    if (argc != 3) {
-        printf("Usage: aes-encrypt-ecb <input_file> <output_file>\n");
+    char *inputFile, *outputFile, *mode;
+    if (argc != 4) {
+        printf("Usage: aes-encrypt-ecb <input_file> <output_file> encrypt(or decrypt) \n");
         return 0;
     }
     inputFile = argv[1];
     outputFile = argv[2];
+    mode = argv[3];
     /************************ Key ************************/
     
     BYTE key[16] = {0x2b, 0x7e, 0x15, 0x16, 0x28, 0xae, 0xd2, 0xa6, 0xab, 0xf7, 0x15, 0x88, 0x09, 0xcf, 0x4f, 0x3c };
@@ -33,7 +34,16 @@ int main (int argc, char *argv[])
     
         // Encrypte message to cipher
     BYTE cipher[16];
-    aes_encrypt(cipher, message, key);
+    if (strcmp(mode, "encrypt")) {
+        printf("/************************ start encrypt ************************/");
+        aes_encrypt(cipher, message, key);
+    } else if(strcmp(mode, "decrypt")) {
+        printf("/************************ start decrypt ************************/");
+        aes_decrypt(cipher, message, key);
+    }else {
+        perror("Choose encrypt or decrypt mode");
+        exit(-1);
+    }
     
     /************************ Write Cipher String To Output File ************************/
     
