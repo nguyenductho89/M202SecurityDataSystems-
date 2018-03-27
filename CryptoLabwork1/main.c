@@ -34,11 +34,11 @@ int main (int argc, char *argv[])
     
         // Encrypte message to cipher
     BYTE cipher[16];
-    if (strcmp(mode, "encrypt")) {
-        printf("/************************ start encrypt ************************/");
+    if (!strcmp(mode, "encrypt")) {
+        printf("/************************ start encrypt ************************/\n");
         aes_encrypt(cipher, message, key);
-    } else if(strcmp(mode, "decrypt")) {
-        printf("/************************ start decrypt ************************/");
+    } else if(!strcmp(mode, "decrypt")) {
+        printf("/************************ start decrypt ************************/\n");
         aes_decrypt(cipher, message, key);
     }else {
         perror("Choose encrypt or decrypt mode");
