@@ -10,6 +10,7 @@
 		D0BB47A52069357A007D5F48 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D0BB47A42069357A007D5F48 /* main.c */; };
 		D0BB47AC206935C5007D5F48 /* aes.c in Sources */ = {isa = PBXBuildFile; fileRef = D0BB47AB206935C5007D5F48 /* aes.c */; };
 		D0BB47B120693E7B007D5F48 /* Helper.c in Sources */ = {isa = PBXBuildFile; fileRef = D0BB47B020693E7B007D5F48 /* Helper.c */; };
+		D0BB47B5206A8D1C007D5F48 /* testFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = D0BB47B4206A8D1C007D5F48 /* testFunctions.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,12 +26,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D0BB47A12069357A007D5F48 /* CryptoLabwork1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CryptoLabwork1; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0BB47A12069357A007D5F48 /* aes-ecb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "aes-ecb"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BB47A42069357A007D5F48 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		D0BB47AB206935C5007D5F48 /* aes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aes.c; sourceTree = "<group>"; };
 		D0BB47AF20693E7B007D5F48 /* Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
 		D0BB47B020693E7B007D5F48 /* Helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Helper.c; sourceTree = "<group>"; };
 		D0BB47B2206942EA007D5F48 /* aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		D0BB47B4206A8D1C007D5F48 /* testFunctions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testFunctions.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,7 @@
 		D0BB47A22069357A007D5F48 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0BB47A12069357A007D5F48 /* CryptoLabwork1 */,
+				D0BB47A12069357A007D5F48 /* aes-ecb */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +70,7 @@
 				D0BB47AF20693E7B007D5F48 /* Helper.h */,
 				D0BB47B020693E7B007D5F48 /* Helper.c */,
 				D0BB47B2206942EA007D5F48 /* aes.h */,
+				D0BB47B4206A8D1C007D5F48 /* testFunctions.c */,
 			);
 			path = CryptoLabwork1;
 			sourceTree = "<group>";
@@ -75,9 +78,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D0BB47A02069357A007D5F48 /* CryptoLabwork1 */ = {
+		D0BB47A02069357A007D5F48 /* aes-ecb */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0BB47A82069357A007D5F48 /* Build configuration list for PBXNativeTarget "CryptoLabwork1" */;
+			buildConfigurationList = D0BB47A82069357A007D5F48 /* Build configuration list for PBXNativeTarget "aes-ecb" */;
 			buildPhases = (
 				D0BB479D2069357A007D5F48 /* Sources */,
 				D0BB479E2069357A007D5F48 /* Frameworks */,
@@ -87,9 +90,9 @@
 			);
 			dependencies = (
 			);
-			name = CryptoLabwork1;
+			name = "aes-ecb";
 			productName = CryptoLabwork1;
-			productReference = D0BB47A12069357A007D5F48 /* CryptoLabwork1 */;
+			productReference = D0BB47A12069357A007D5F48 /* aes-ecb */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -119,7 +122,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D0BB47A02069357A007D5F48 /* CryptoLabwork1 */,
+				D0BB47A02069357A007D5F48 /* aes-ecb */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0BB47A52069357A007D5F48 /* main.c in Sources */,
+				D0BB47B5206A8D1C007D5F48 /* testFunctions.c in Sources */,
 				D0BB47AC206935C5007D5F48 /* aes.c in Sources */,
 				D0BB47B120693E7B007D5F48 /* Helper.c in Sources */,
 			);
@@ -269,7 +273,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0BB47A82069357A007D5F48 /* Build configuration list for PBXNativeTarget "CryptoLabwork1" */ = {
+		D0BB47A82069357A007D5F48 /* Build configuration list for PBXNativeTarget "aes-ecb" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0BB47A92069357A007D5F48 /* Debug */,
