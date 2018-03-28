@@ -18,5 +18,6 @@ void writeToOuputFile(char *text, char *fileName);
 char *readInputFile(char *fileName);
 int appendString(char **json, const char *format, ...);
 void convertCharToByteArray(BYTE messageFromFile[],char *input);
-void convertCharToByteArray2(BYTE messageFromFile[NumberOfBlock][16],char *input);
+void convertInputStringToMessage(BYTE messageFromFile[NumberOfBlock][16],char *input);
+char *replace(const char *s, char ch, const char *repl);
 #endif /* Helper_h */

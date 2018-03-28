@@ -75,26 +75,37 @@ void convertCharToByteArray(BYTE messageFromFile[],char *input){
         p = strtok (NULL, " ");
     }
 }
-void convertCharToByteArray2(BYTE messageFromFile[NumberOfBlock][16],char *input){
-    /*Counter variables for the loop*/
-    int blockOrdinalInArray = 0;
+void convertInputStringToMessage(BYTE messageFromFile[NumberOfBlock][16],char *input){
     int hexOrdinalInBlock = 0;
+    int blockOrdinalInArray = 0;
+    //Split input string by a single space
     char *p = strtok (input, " ");
-   // while (p != NULL)
-   // {
-        for(hexOrdinalInBlock=0; hexOrdinalInBlock<NumberOfBlock; hexOrdinalInBlock++) {
-            for(blockOrdinalInArray=0;blockOrdinalInArray<16;blockOrdinalInArray++) {
+        for(blockOrdinalInArray=0; blockOrdinalInArray<NumberOfBlock; blockOrdinalInArray++) {
+            for(hexOrdinalInBlock=0;hexOrdinalInBlock<16;hexOrdinalInBlock++) {
                 if (p != NULL) {
-                    messageFromFile[hexOrdinalInBlock][blockOrdinalInArray] = (BYTE)strtol(p,NULL,16);
+                    messageFromFile[blockOrdinalInArray][hexOrdinalInBlock] = (BYTE)strtol(p,NULL,16);
                 }
-//                }else {
-//                    messageFromFile[hexOrdinalInBlock][blockOrdinalInArray] = "00";
-//                }
-                printf("hexOrdinalInBlock : %d, blockOrdinalInArray: %d\n",hexOrdinalInBlock,blockOrdinalInArray);
                 p = strtok (NULL, " ");
             }
         }
-        
-    //}
 }
 
+char *replace(const char *s, char ch, const char *repl) {
+    int count = 0;
+    const char *t;
+    for(t=s; *t; t++)
+        count += (*t == ch);
+    size_t rlen = strlen(repl);
+    char *res = malloc(strlen(s) + (rlen-1)*count + 1);
+    char *ptr = res;
+    for(t=s; *t; t++) {
+        if(*t == ch) {
+            memcpy(ptr, repl, rlen);
+            ptr += rlen;
+        } else {
+            *ptr++ = *t;
+        }
+    }
+    *ptr = 0;
+    return res;
+}

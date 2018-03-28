@@ -10,9 +10,6 @@
 #include "Helper.h"
 int main (int argc, char *argv[])
 {
-
-
-    
     char *inputFile, *outputFile, *mode;
     inputFile = "padding16copy";
     outputFile = "pad16en";
@@ -25,14 +22,14 @@ int main (int argc, char *argv[])
     
     // Read message from input file
     char *input = readInputFile(inputFile);
+    //Replace line break with a single space
+    input = replace(input, '\n', " ");
     printf("/************************ Input from input file ************************/\n");
     printf("%s\n", input);
     printf("/************************************************************************/\n");
     // Convert input to message
-    //BYTE message[256];
-    //convertCharToByteArray(message, input);
     BYTE message[NumberOfBlock][16];
-    convertCharToByteArray2(message, input);
+    convertInputStringToMessage(message, input);
     printf("/************************ Message ************************/\n");
     for (int i = 0; i<NumberOfBlock; i++) {
         for (int j = 0; j < 16; j++) {
