@@ -10,7 +10,7 @@
 
 void writeToOuputFile(char *text, char *fileName) {
     FILE * fp;
-    fp = fopen (fileName,"w");
+    fp = fopen (fileName,"ab");
     fprintf (fp, "%s", text);
     fclose (fp);
 }
@@ -75,3 +75,26 @@ void convertCharToByteArray(BYTE messageFromFile[],char *input){
         p = strtok (NULL, " ");
     }
 }
+void convertCharToByteArray2(BYTE messageFromFile[NumberOfBlock][16],char *input){
+    /*Counter variables for the loop*/
+    int blockOrdinalInArray = 0;
+    int hexOrdinalInBlock = 0;
+    char *p = strtok (input, " ");
+   // while (p != NULL)
+   // {
+        for(hexOrdinalInBlock=0; hexOrdinalInBlock<NumberOfBlock; hexOrdinalInBlock++) {
+            for(blockOrdinalInArray=0;blockOrdinalInArray<16;blockOrdinalInArray++) {
+                if (p != NULL) {
+                    messageFromFile[hexOrdinalInBlock][blockOrdinalInArray] = (BYTE)strtol(p,NULL,16);
+                }
+//                }else {
+//                    messageFromFile[hexOrdinalInBlock][blockOrdinalInArray] = "00";
+//                }
+                printf("hexOrdinalInBlock : %d, blockOrdinalInArray: %d\n",hexOrdinalInBlock,blockOrdinalInArray);
+                p = strtok (NULL, " ");
+            }
+        }
+        
+    //}
+}
+

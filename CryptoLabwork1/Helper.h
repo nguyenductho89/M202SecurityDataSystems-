@@ -8,7 +8,7 @@
 
 #ifndef Helper_h
 #define Helper_h
-
+#define NumberOfBlock 9
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -18,4 +18,5 @@ void writeToOuputFile(char *text, char *fileName);
 char *readInputFile(char *fileName);
 int appendString(char **json, const char *format, ...);
 void convertCharToByteArray(BYTE messageFromFile[],char *input);
+void convertCharToByteArray2(BYTE messageFromFile[NumberOfBlock][16],char *input);
 #endif /* Helper_h */
