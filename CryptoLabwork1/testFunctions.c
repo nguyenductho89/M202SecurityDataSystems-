@@ -8,25 +8,10 @@
 
 
 #include "Helper.h"
-int main (int argc, char *argv[])
-{
-    char *inputFile, *outputFile, *mode;
-    inputFile = "padding16copy";
-    outputFile = "pad16en";
-    mode = "encrypt";
+void operatingWithMode(char *mode,char *input, char *inputFile, char *outputFile){
     /************************ Key ************************/
     
     BYTE key[16] = {0x2b, 0x7e, 0x15, 0x16, 0x28, 0xae, 0xd2, 0xa6, 0xab, 0xf7, 0x15, 0x88, 0x09, 0xcf, 0x4f, 0x3c };
-    
-    /************************ Message ************************/
-    
-    // Read message from input file
-    char *input = readInputFile(inputFile);
-    //Replace line break with a single space
-    input = replace(input, '\n', " ");
-    printf("/************************ Input from input file ************************/\n");
-    printf("%s\n", input);
-    printf("/************************************************************************/\n");
     // Convert input to message
     BYTE message[NumberOfBlock][16];
     convertInputStringToMessage(message, input);
@@ -57,9 +42,9 @@ int main (int argc, char *argv[])
             // Write cipher string to output file
             writeToOuputFile(hexCipherString, outputFile);
             printf("%s\n", hexCipherString);
-           
+            
         }
-         printf("/************************************************************************/\n");
+        printf("/************************************************************************/\n");
     } else if(!strcmp(mode, "decrypt")) {
         printf("/************************ start decrypt ************************/\n");
         aes_decrypt(cipher, message, key);
@@ -68,5 +53,30 @@ int main (int argc, char *argv[])
         exit(-1);
     }
     printf("/************************ '%s' finish successfully! Check '%s' for result ************************/\n",mode,outputFile);
+}
+
+int main (int argc, char *argv[])
+{
+    char *inputFile, *outputFile, *mode;
+    inputFile = "padding16copy";
+    outputFile = "pad16en";
+    mode = "encrypt";
+
+    
+    /************************ Message ************************/
+    
+    // Read message from input file
+    char *input = readInputFile(inputFile);
+    //Replace line break with a single space
+    //input = replace(input, '\n', " "); //Use when input file contains \n
+    printf("/************************ Input from input file ************************/\n");
+    printf("%s\n", input);
+    printf("/************************************************************************/\n");
+    
+    operatingWithMode(mode, input, inputFile, outputFile);
+    
+
     return 0;
 }
+
+
