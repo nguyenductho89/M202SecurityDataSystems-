@@ -75,7 +75,7 @@ void convertCharToByteArray(BYTE messageFromFile[],char *input){
         p = strtok (NULL, " ");
     }
 }
-void convertInputStringToMessage(BYTE messageFromFile[NumberOfBlock][16],char *input){
+void convertInputStringToMessageBlocks(BYTE messageBlocks[NumberOfBlock][16],char *input){
     int hexOrdinalInBlock = 0;
     int blockOrdinalInArray = 0;
     //Split input string by a single space
@@ -83,7 +83,7 @@ void convertInputStringToMessage(BYTE messageFromFile[NumberOfBlock][16],char *i
         for(blockOrdinalInArray=0; blockOrdinalInArray<NumberOfBlock; blockOrdinalInArray++) {
             for(hexOrdinalInBlock=0;hexOrdinalInBlock<16;hexOrdinalInBlock++) {
                 if (p != NULL) {
-                    messageFromFile[blockOrdinalInArray][hexOrdinalInBlock] = (BYTE)strtol(p,NULL,16);
+                    messageBlocks[blockOrdinalInArray][hexOrdinalInBlock] = (BYTE)strtol(p,NULL,16);
                 }
                 p = strtok (NULL, " ");
             }
@@ -109,3 +109,5 @@ char *replace(const char *s, char ch, const char *repl) {
     *ptr = 0;
     return res;
 }
+
+

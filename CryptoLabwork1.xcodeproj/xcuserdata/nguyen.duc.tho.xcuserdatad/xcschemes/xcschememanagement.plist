@@ -9,6 +9,39 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>aes-ecb.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>linklistTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>readHexFromFileTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D0BB47A02069357A007D5F48</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D9C0C4A4206C96DE00518902</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D9C0C4B1206CBA0400518902</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

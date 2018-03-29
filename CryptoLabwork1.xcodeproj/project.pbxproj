@@ -11,10 +11,32 @@
 		D0BB47AC206935C5007D5F48 /* aes.c in Sources */ = {isa = PBXBuildFile; fileRef = D0BB47AB206935C5007D5F48 /* aes.c */; };
 		D0BB47B120693E7B007D5F48 /* Helper.c in Sources */ = {isa = PBXBuildFile; fileRef = D0BB47B020693E7B007D5F48 /* Helper.c */; };
 		D0BB47B5206A8D1C007D5F48 /* testFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = D0BB47B4206A8D1C007D5F48 /* testFunctions.c */; };
+		D9BB2435206CC68500292BAD /* Helper.h in Sources */ = {isa = PBXBuildFile; fileRef = D0BB47AF20693E7B007D5F48 /* Helper.h */; };
+		D9BB2436206CC69800292BAD /* Helper.c in Sources */ = {isa = PBXBuildFile; fileRef = D0BB47B020693E7B007D5F48 /* Helper.c */; };
+		D9C0C4B0206C96F400518902 /* readHexFromFileTEst.c in Sources */ = {isa = PBXBuildFile; fileRef = D9C0C4A1206C965C00518902 /* readHexFromFileTEst.c */; };
+		D9C0C4BE206CBA3100518902 /* linklistTest.c in Sources */ = {isa = PBXBuildFile; fileRef = D9C0C4BD206CBA3100518902 /* linklistTest.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		D0BB479F2069357A007D5F48 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		D9C0C4AB206C96DE00518902 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		D9C0C4B8206CBA0400518902 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -33,10 +55,28 @@
 		D0BB47B020693E7B007D5F48 /* Helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Helper.c; sourceTree = "<group>"; };
 		D0BB47B2206942EA007D5F48 /* aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
 		D0BB47B4206A8D1C007D5F48 /* testFunctions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testFunctions.c; sourceTree = "<group>"; };
+		D9C0C4A1206C965C00518902 /* readHexFromFileTEst.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = readHexFromFileTEst.c; sourceTree = "<group>"; };
+		D9C0C4AF206C96DE00518902 /* readHexFromFileTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = readHexFromFileTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9C0C4BC206CBA0400518902 /* linklistTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = linklistTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9C0C4BD206CBA3100518902 /* linklistTest.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = linklistTest.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D0BB479E2069357A007D5F48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C0C4AA206C96DE00518902 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C0C4B7206CBA0400518902 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				D0BB47A12069357A007D5F48 /* aes-ecb */,
+				D9C0C4AF206C96DE00518902 /* readHexFromFileTest */,
+				D9C0C4BC206CBA0400518902 /* linklistTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +113,8 @@
 				D0BB47B020693E7B007D5F48 /* Helper.c */,
 				D0BB47B2206942EA007D5F48 /* aes.h */,
 				D0BB47B4206A8D1C007D5F48 /* testFunctions.c */,
+				D9C0C4A1206C965C00518902 /* readHexFromFileTEst.c */,
+				D9C0C4BD206CBA3100518902 /* linklistTest.c */,
 			);
 			path = CryptoLabwork1;
 			sourceTree = "<group>";
@@ -95,6 +139,40 @@
 			productReference = D0BB47A12069357A007D5F48 /* aes-ecb */;
 			productType = "com.apple.product-type.tool";
 		};
+		D9C0C4A4206C96DE00518902 /* readHexFromFileTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9C0C4AC206C96DE00518902 /* Build configuration list for PBXNativeTarget "readHexFromFileTest" */;
+			buildPhases = (
+				D9C0C4A5206C96DE00518902 /* Sources */,
+				D9C0C4AA206C96DE00518902 /* Frameworks */,
+				D9C0C4AB206C96DE00518902 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = readHexFromFileTest;
+			productName = CryptoLabwork1;
+			productReference = D9C0C4AF206C96DE00518902 /* readHexFromFileTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		D9C0C4B1206CBA0400518902 /* linklistTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9C0C4B9206CBA0400518902 /* Build configuration list for PBXNativeTarget "linklistTest" */;
+			buildPhases = (
+				D9C0C4B2206CBA0400518902 /* Sources */,
+				D9C0C4B7206CBA0400518902 /* Frameworks */,
+				D9C0C4B8206CBA0400518902 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = linklistTest;
+			productName = CryptoLabwork1;
+			productReference = D9C0C4BC206CBA0400518902 /* linklistTest */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -106,6 +184,12 @@
 				TargetAttributes = {
 					D0BB47A02069357A007D5F48 = {
 						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D9C0C4A4206C96DE00518902 = {
+						ProvisioningStyle = Automatic;
+					};
+					D9C0C4B1206CBA0400518902 = {
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -123,6 +207,8 @@
 			projectRoot = "";
 			targets = (
 				D0BB47A02069357A007D5F48 /* aes-ecb */,
+				D9C0C4A4206C96DE00518902 /* readHexFromFileTest */,
+				D9C0C4B1206CBA0400518902 /* linklistTest */,
 			);
 		};
 /* End PBXProject section */
@@ -136,6 +222,24 @@
 				D0BB47B5206A8D1C007D5F48 /* testFunctions.c in Sources */,
 				D0BB47AC206935C5007D5F48 /* aes.c in Sources */,
 				D0BB47B120693E7B007D5F48 /* Helper.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C0C4A5206C96DE00518902 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9BB2436206CC69800292BAD /* Helper.c in Sources */,
+				D9BB2435206CC68500292BAD /* Helper.h in Sources */,
+				D9C0C4B0206C96F400518902 /* readHexFromFileTEst.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C0C4B2206CBA0400518902 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C0C4BE206CBA3100518902 /* linklistTest.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +365,38 @@
 			};
 			name = Release;
 		};
+		D9C0C4AD206C96DE00518902 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D9C0C4AE206C96DE00518902 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D9C0C4BA206CBA0400518902 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D9C0C4BB206CBA0400518902 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -278,6 +414,24 @@
 			buildConfigurations = (
 				D0BB47A92069357A007D5F48 /* Debug */,
 				D0BB47AA2069357A007D5F48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9C0C4AC206C96DE00518902 /* Build configuration list for PBXNativeTarget "readHexFromFileTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9C0C4AD206C96DE00518902 /* Debug */,
+				D9C0C4AE206C96DE00518902 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9C0C4B9206CBA0400518902 /* Build configuration list for PBXNativeTarget "linklistTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9C0C4BA206CBA0400518902 /* Debug */,
+				D9C0C4BB206CBA0400518902 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
