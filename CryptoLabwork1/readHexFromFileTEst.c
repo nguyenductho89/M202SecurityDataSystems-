@@ -56,7 +56,7 @@ void InsertAtTail(BYTE block[16]) {
 int main()
 {
     FILE *fp;
-    fp = fopen("logo.png", "rb");
+    fp = fopen("padding16copy", "rb");
     //fp = fopen("padding16", "rb");
     
     if(fp == NULL)
@@ -78,33 +78,37 @@ int main()
             InsertAtTail(block);
             numberOfBlock++;
         }
-//        if (numberOfBlock == 1755) {
-//
-//        }
     }
     //Padding for the last block
     int lastBlockLength = i;
     int padding = 16 - lastBlockLength;
-    if (padding > 1) {
-        for (int pad = padding-1; pad == 0; pad --) {
-            block[16-pad] = (BYTE)(padding);
+    int interator = padding;
+    if (padding > 0) {
+        while (interator>0) {
+            block[16-interator] = (BYTE)(padding);
+            interator--;
         }
     } else if(padding == 0) {
-        
+        BYTE paddingBlock[16];
+        for (int i = 0; i<16; i++) {
+            paddingBlock[i] = (BYTE)16;
+        }
+        InsertAtTail(paddingBlock);
     }else {
         perror("Check create block function");
     }
-    for (int j = 0; j<i; j++) {
-        printf("%x\n",block[j]);
-    }
-//    struct Node* temp = head;
-//        while(temp != NULL) {
-//            for (int i = 0; i<16; i++) {
-//                printf("%x ",temp->block[i]);
-//            }
-//            temp = temp->next;
-//        }
-//        printf("\n");
+//    for (int j = 0; j<16; j++) {
+//        printf("%x\n",block[j]);
+//    }
+    struct Node* temp = head;
+        while(temp != NULL) {
+            for (int i = 0; i<16; i++) {
+                printf("%x ",temp->block[i]);
+            }
+            printf("\n");
+            temp = temp->next;
+        }
+        printf("\n");
     
     
     
